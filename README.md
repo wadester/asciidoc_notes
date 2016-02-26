@@ -48,8 +48,8 @@ My goals for a documentation solution:
 Links:
 ------
 
-* link=https://en.wikipedia.org/wiki/AsciiDoc[]
-* link=http://www.methods.co.nz/asciidoc/index.html[]
+* https://en.wikipedia.org/wiki/AsciiDoc (link=https://en.wikipedia.org/wiki/AsciiDoc[])
+* http://www.methods.co.nz/asciidoc/index.htm (link=http://www.methods.co.nz/asciidoc/index.html[])
 
 My Legacy Minidocs:
 -------------------
@@ -63,8 +63,11 @@ plus tool suite.  AsciiDoc fit my needs.
 Migration from the existing format to AsciiDoc is very simple:
 
 1)  Fix the header to match the template
+
 2)  Fix the sections to use --- not === under titles
+
 3)  Add spaces around bullets/pre-formatted text
+
 4)  Fix links to use the link: tag.  
 
 Files:
