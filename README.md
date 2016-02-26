@@ -74,10 +74,16 @@ Files:
 ------
 
   docbook-xsl.css     from AsciiDoc -- downloaded
+
   Makefile            build example docs
+
   README.md           This file
+
   sample_manpage.txt  sample UNIX man page from AsciiDoc examples
+
   sample_minidoc.txt  simple article for code docs 
+
   template-man.txt    man template
+
   template.txt        doc template
 
