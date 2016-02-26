@@ -1,0 +1,53 @@
+TEMPLATE(1)
+===========
+:doctype: manpage
+
+
+NAME
+----
+TMAN - template for man page so does nothing
+
+
+SYNOPSIS
+--------
+*TMAN* ['OPTIONS'] 'FILE'
+
+
+DESCRIPTION
+-----------
+The tempalte-man(1) command does nothing on 'FILE'....
+Display this using man -l TMAN.1
+
+
+OPTIONS
+-------
+*-a, --attribute*='ATTRIBUTE'::
+    Does nothing.
+
+*-b, --backend*='BACKEND'::
+    Also does nothing
+
+[[X1]]
+New Section
+-----------
+
+The TMAN(1) options do nothing.  
+
+EXIT STATUS
+-----------
+*0*::
+    Success
+
+*1*::
+    Failure
+
+BUGS
+----
+Yes it has bugs
+
+AUTHOR
+------
+The author is WH based on the AsciiDoc man page.
+
+
+

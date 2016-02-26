@@ -1,0 +1,57 @@
+Sample Minidoc in AsciiDoc
+==========================
+Wade Hampton <wadeh@localhost>
+0.2.0, 2/25/2016: Second version
+
+This is a test document.  It is only a test.  Do not kick 
+your cat or otherwise panic.  It is only a test.  No nuclear
+radiation will imact your site.
+
+History:
+--------
+
+This is where history would go -- indent 2 spaces for preformat text.
+
+  0.1.0	02/25/2016    created
+  0.2.0 02/25/2016    Second version
+
+Notes:
+------
+
+This is a sample minidoc.  It only includes 1 top-level section,
+the section with the line of ==== at the top.  Each subsequent
+section uses a line of dashes.  Bullets use * and numbered lists
+use 1) etc.  Bold is * + text + * like *this is bold*.
+
+If text is to be pre-formatted, preceed with a blank line
+then indent like:
+
+  This should be pre-format text
+  And this should be the second line
+  1.   asdf
+  2.   jkl;
+
+
+New Section:
+------------
+
+* New section is here
+* This is a second bullet
+
+1) This is a numbered list
+2) This is the second bullet.
+
+Conversion:
+-----------
+
+* Basic to HTML (w/ asciidoc don't need -o OFILE):
+
+  asciidoc -o sample_minidoc-1.html sample_minidoc.txt 
+  a2x sample_minidoc.txt       # creates TOC too!
+  a2x -d article -f html sample_minidoc.txt
+
+* PDF and PS (need newer Asciidoc):
+
+  a2x -d article -f pdf sample_minidoc.txt
+  a2x -d article -f ps sample_minidoc.txt
+

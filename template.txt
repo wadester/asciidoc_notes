@@ -1,0 +1,22 @@
+Template Title
+==============
+Wade Hampton <wadehamptoniv@gmail.com>
+0.1.0, 2/25/2016: Created by WH
+
+Add doc summary here.
+
+History:
+--------
+
+  0.1.0	02/25/2016    created
+
+Notes:
+------
+
+Sections go here.  Use * for bullets, 1) for numbered lists.
+
+New Section:
+------------
+
+* New section is here
+ 
