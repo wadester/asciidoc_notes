@@ -1,11 +1,11 @@
-# asciidoc_notes
 Notes and Examples on AsciiDoc
 ==============================
-WWH
-0.1, 2/26/2016: Created README.md
+Wade Hampton <wadehamptoniv@gmail.com>
+0.2, 3/11/2016: Readme now AsciiDoc compliant
 
 Summary:
 --------
+
 This repository contains notes and examples of AsciiDoc documents
 that can be used for source code documentation.  This repo 
 also contains some document templates.  The Makefile may be 
@@ -16,7 +16,7 @@ This contains test and example documents/scripts.
 History:
 --------
 
-N/A
+  N/A
 
 Why AsciiDoc:
 -------------
@@ -29,19 +29,19 @@ MANPAGE docs.
 
 My goals for a documentation solution:
 
-1) Simple, ASCII format that is human-readable, but also parsable.
+1. Simple, ASCII format that is human-readable, but also parsable.
    Not a difficult, rigid format like XML or HTML.  Easy to 
    learn, low barrier to entry.
 
-2) Ability to easily use for documents such as README files
+2. Ability to easily use for documents such as README files
    and technical notes that can live with source code in the
    same repositories and be edited using the same tools.
    This makes cut/paste with the source or O/S very easy.
 
-3) Support a simple set of open source tools compatible with all 
+3. Support a simple set of open source tools compatible with all 
    platforms (especially Linux).  Widespread support is desired.
 
-4) Support the conversion of the text documents into HTML pages,
+4. Support the conversion of the text documents into HTML pages,
    PDF documents, and other document types.  EPUB and MAN PAGES
    are a plus (not a hard core requirement).
 
@@ -62,28 +62,38 @@ plus tool suite.  AsciiDoc fit my needs.
 
 Migration from the existing format to AsciiDoc is very simple:
 
-1)  Fix the header to match the template
+1.  Fix the header to match the template by removing the 
+    doc name, underlining doc title with ==, adding in document
+    name and version like example above (include comma after the
+    version to allow a2x to properly parse it).
 
-2)  Fix the sections to use --- not === under titles
+2.  Fix the sections to use --- not === under titles (without
+    this, a2x will fail).
 
-3)  Add spaces around bullets/pre-formatted text
+3.  Add spaces around bullets/pre-formatted text.  
 
-4)  Fix links to use the link: tag.  
+4.  Fix links to use the link: tag.  
+
+5.  Use [start=1] to restart a list in the same block, for
+    example after a paragraph.
+
+6.  Convert numbered lists to use "." after them.  
+
+This would be a sample paragraph.  To restart the list use 
+the [start=1] tag.
+
+[start=1]
+1.  This is a new numbered list.
+2.  And more list.
 
 Files:
 ------
 
   docbook-xsl.css     from AsciiDoc -- downloaded
-
   Makefile            build example docs
-
   README.md           This file
-
   sample_manpage.txt  sample UNIX man page from AsciiDoc examples
-
   sample_minidoc.txt  simple article for code docs 
-
   template-man.txt    man template
-
   template.txt        doc template
 

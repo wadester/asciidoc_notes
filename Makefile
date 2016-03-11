@@ -5,10 +5,15 @@
 # Notes:    None
 #
 all:
+	$(MAKE) README
 	$(MAKE) sample_minidoc_test
 	$(MAKE) sample_manpage
 	$(MAKE) template
 	$(MAKE) template-man
+
+README::
+	asciidoc -o README-1.html README.md
+	a2x -d article -f xhtml README.md
 
 sample_minidoc_test::
 	asciidoc -o sample_minidoc-1.html sample_minidoc.txt 
