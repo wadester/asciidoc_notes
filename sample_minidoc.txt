@@ -26,7 +26,8 @@ Notes:
 This is a sample minidoc.  It only includes 1 top-level section,
 the section with the line of ==== at the top.  Each subsequent
 section uses a line of dashes.  Bullets use * and numbered lists
-use 1) etc.  Bold is * + text + * like *this is bold*.
+use 1) etc.  Bold is * + text + * like *this is bold*.  Note, 
+the old convertor may convert any * to bold....
 
 If text is to be pre-formatted, preceed with a blank line
 then indent like:
@@ -59,6 +60,29 @@ the [start=1] tag.
 [start=1]
 1.  This is a new numbered list.
 2.  And more list.
+.   More.
+
+This is a paragraph after a bullet list. To restart the list use 
+the [start=1] tag.
+
+[start=1]
+1.  This is item 1.
+
+2.   Next item
+
+This is a paragraph after a bullet list. To restart the list use 
+the [start=1] tag.  Below is a Roman number list (not supported
+with older AsciiDoc).
+
+[start=1]
+i) Roman level 1
+ii) Roman next
+
+This is a list with implicit numbering:
+
+.  Item 1
+.  Item 2
+.  Item 3
 
 Conversion:
 -----------

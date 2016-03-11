@@ -85,15 +85,24 @@ the [start=1] tag.
 [start=1]
 1.  This is a new numbered list.
 2.  And more list.
+3.  Note, this will fail on GitHub....
 
 Files:
 ------
 
+This is spread out to support GitHub's conversion:
+
   docbook-xsl.css     from AsciiDoc -- downloaded
+
   Makefile            build example docs
+
   README.md           This file
+
   sample_manpage.txt  sample UNIX man page from AsciiDoc examples
+
   sample_minidoc.txt  simple article for code docs 
+
   template-man.txt    man template
+
   template.txt        doc template
 
