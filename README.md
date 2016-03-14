@@ -52,8 +52,8 @@ My goals for a documentation solution:
 Links:
 ------
 
-* https://en.wikipedia.org/wiki/AsciiDoc (link=https://en.wikipedia.org/wiki/AsciiDoc[])
-* http://www.methods.co.nz/asciidoc/index.htm (link=http://www.methods.co.nz/asciidoc/index.html[])
+* https://en.wikipedia.org/wiki/AsciiDoc (link:https://en.wikipedia.org/wiki/AsciiDoc[])
+* http://www.methods.co.nz/asciidoc/index.htm (link:http://www.methods.co.nz/asciidoc/index.html[])
 
 My Legacy Minidocs:
 -------------------
