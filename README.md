@@ -1,7 +1,7 @@
 Notes and Examples on AsciiDoc
 ==============================
 Wade Hampton <wadehamptoniv@gmail.com>
-0.2, 3/11/2016: Readme now AsciiDoc compliant
+0.3, 3/14/2016: Update for other AsciiDoc features
 
 Summary:
 --------
@@ -24,8 +24,8 @@ Why AsciiDoc:
 AsciiDoc provides some excellent tools and capabilities to
 convert plain text into multiple formats for a multitude of
 purposes.  It excels as means of creating code documentation 
-that can live with the code, but create nice HTML, PDF, and
-MANPAGE docs.
+in ASCII that can live with the code, but also be converted into
+clean HTML, PDF, EPUB, and MANPAGE documents.
 
 My goals for a documentation solution:
 
@@ -45,6 +45,10 @@ My goals for a documentation solution:
    PDF documents, and other document types.  EPUB and MAN PAGES
    are a plus (not a hard core requirement).
 
+5. Compatible with the parsers that GitHub uses to support the
+   README.md files for repositories.
+   
+
 Links:
 ------
 
@@ -56,9 +60,10 @@ My Legacy Minidocs:
 
 Since the early 1990s, I have been creating "Minidocs" using a 
 format similar to AsciiDoc and even created a simple formatter 
-that converted from these to HTML (private project).  I wanted 
-to get away from the custom format and used an open source format 
-plus tool suite.  AsciiDoc fit my needs.  
+that converted from these into HTML (private project, not OSS).  
+I wanted eliminate this custom format and stop supporting the
+legacy tool by using a similar, open source format plus tool suite.  
+AsciiDoc fit my needs!  
 
 Migration from the existing format to AsciiDoc is very simple:
 
@@ -72,12 +77,14 @@ Migration from the existing format to AsciiDoc is very simple:
 
 3.  Add spaces around bullets/pre-formatted text.  
 
-4.  Fix links to use the link: tag.  
+4.  Fix numbered and lettered lists to use N., not N)
 
-5.  Use [start=1] to restart a list in the same block, for
+5.  Fix links to use the link: tag.  
+
+6.  Use [start=1] to restart a list in the same block, for
     example after a paragraph.
 
-6.  Convert numbered lists to use "." after them.  
+7.  Convert numbered lists to use "." after them.  
 
 This would be a sample paragraph.  To restart the list use 
 the [start=1] tag.
