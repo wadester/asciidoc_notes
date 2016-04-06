@@ -2,7 +2,15 @@
 # Module:   Makefile
 # Author:   Wade Hampton
 # Date:     2/25/2016
-# Notes:    None
+# Notes:    
+# 1)  This has been tested on Ubuntu 14.04 using the latest
+#     versions of AsciiDoc and related tools.  Some of these
+#     features do not work on CentOS 5 (for example EPUB output).
+# 2)  The asciidoc command creates a simple HTML document by default,
+#     and a2x creates one using a style sheet with history table 
+#     plus table of contents (this is why two example HTML files
+#     are created by this Makefile).
+# 3)  Type make clean to remove the generated files.
 #
 all:
 	$(MAKE) README

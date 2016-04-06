@@ -1,17 +1,22 @@
 Notes and Examples on AsciiDoc
 ==============================
 Wade Hampton <wadehamptoniv@gmail.com>
-0.3, 3/14/2016: Update for other AsciiDoc features
+0.4, 4/6/2016: Update, cleanup
 
 Summary:
 --------
 
 This repository contains notes and examples of AsciiDoc documents
-that can be used for source code documentation.  This repo 
-also contains some document templates.  The Makefile may be 
-used to build/test making EPUB, PDF, PS, and man pages.
+that can be used for source code documentation, short engineering
+notes, and similar project documentation.  AsciiDoc also allows
+these to be used for end-user documentation including manual 
+pages, articles, PDF documents, and EPUB books.
 
-This contains test and example documents/scripts.
+This repository also contains some document templates and 
+sample documents.  The Makefile may be used to build/test making 
+EPUB, PDF, PS, and man pages.  Once the AsciiDoc tools have been 
+installed (see AsciiDoc links), just type "make" and the examples 
+will be created.
 
 History:
 --------
@@ -30,30 +35,59 @@ clean HTML, PDF, EPUB, and MANPAGE documents.
 My goals for a documentation solution:
 
 1. Simple, ASCII format that is human-readable, but also parsable.
-   Not a difficult, rigid format like XML or HTML.  Easy to 
-   learn, low barrier to entry.
+   Not a difficult, rigid format like XML or HTML.
 
-2. Ability to easily use for documents such as README files
+2. Easy to learn, low barrier for creation of effective communications.
+
+3. Ability to easily use for documents such as README files
    and technical notes that can live with source code in the
    same repositories and be edited using the same tools.
    This makes cut/paste with the source or O/S very easy.
 
-3. Support a simple set of open source tools compatible with all 
-   platforms (especially Linux).  Widespread support is desired.
+4. Support a simple set of open source tools compatible with all 
+   platforms (especially Linux).  Widespread support is required.
 
-4. Support the conversion of the text documents into HTML pages,
+5. Support the conversion of the text documents into HTML pages,
    PDF documents, and other document types.  EPUB and MAN PAGES
    are a plus (not a hard core requirement).
 
-5. Compatible with the parsers that GitHub uses to support the
-   README.md files for repositories.
-   
+6. Mostly-compatible with the parsers that GitHub uses to support the
+   README.md files for GIT repositories.  (This requires some
+   testing and limits you to a subset of AsciiDoc.)
 
 Links:
 ------
 
 * https://en.wikipedia.org/wiki/AsciiDoc (link:https://en.wikipedia.org/wiki/AsciiDoc[])
 * http://www.methods.co.nz/asciidoc/index.htm (link:http://www.methods.co.nz/asciidoc/index.html[])
+
+(Note that the AsciiDoc links are converted by GitHub to have 
+a [] at the end of them hence the inclusion of TWO copies
+of the links above.)
+
+AsciiDoc Minidocs:
+------------------
+
+The AsciiDoc Minidocs used herein are a standard for a simple
+text document with minimal structure, but using AsciiDoc syntax
+for titles, bullets, enumerated lists, etc.  These are AsciiDoc 
+articles with a header and several sections:
+
+Header:::  Document header, underlined with "===", 
+  followed by Author and email then a version line
+  (see top of document for example).
+
+Top-Level Section:::  Summary with document summary information
+  followed by a History block with lines indented by 2 spaces
+  (or N/A if history does not need to be tracked).
+
+Document Sections:::  The rest of the document.
+
+See link:template.txt[] for an text template and see
+link:template.html[] for the same converted to HTML.
+
+These documents are typically simple, short, and limited to
+a subset of the tools provided by AsciiDoc.  
 
 My Legacy Minidocs:
 -------------------
@@ -63,7 +97,7 @@ format similar to AsciiDoc and even created a simple formatter
 that converted from these into HTML (private project, not OSS).  
 I wanted eliminate this custom format and stop supporting the
 legacy tool by using a similar, open source format plus tool suite.  
-AsciiDoc fit my needs!  
+AsciiDoc fit my needs and provides many additional features!  
 
 Migration from the existing format to AsciiDoc is very simple:
 
@@ -73,23 +107,25 @@ Migration from the existing format to AsciiDoc is very simple:
     version to allow a2x to properly parse it).
 
 2.  Fix the sections to use --- not === under titles (without
-    this, a2x will fail).
+    this, a2x will fail).  Optionally add 2nd level sections
+    underlined with ~~~.
 
-3.  Add spaces around bullets/pre-formatted text.  
+3.  Add spaces around bullets/pre-formatted text.  May need to 
+    fix bullets and paragraphs interspaced with numbered lists.
 
-4.  Fix numbered and lettered lists to use N., not N)
+4.  Fix numbered and lettered lists to use N., not N) and to not
+    mix top-level paragraphs in the middle of numbered lists.
 
 5.  Fix links to use the link: tag.  
 
 6.  Use [start=1] to restart a list in the same block, for
     example after a paragraph.
 
-7.  Convert numbered lists to use "." after them.  
-
 This would be a sample paragraph.  To restart the list use 
 the [start=1] tag.
 
 [start=1]
+
 1.  This is a new numbered list.
 2.  And more list.
 3.  Note, this will fail on GitHub....
