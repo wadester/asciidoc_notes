@@ -1,7 +1,7 @@
 Notes and Examples on AsciiDoc
 ==============================
 Wade Hampton <wadehamptoniv@gmail.com>
-0.4, 4/6/2016: Update, cleanup
+0.4.1, 4/6/2016: Update, cleanup
 
 Summary:
 --------
@@ -73,15 +73,18 @@ text document with minimal structure, but using AsciiDoc syntax
 for titles, bullets, enumerated lists, etc.  These are AsciiDoc 
 articles with a header and several sections:
 
-Header:::  Document header, underlined with "===", 
-  followed by Author and email then a version line
-  (see top of document for example).
+1. Document header:  underlined with "===", followed by Author 
+   and email then a version line (see top of document for example).
 
-Top-Level Section:::  Summary with document summary information
-  followed by a History block with lines indented by 2 spaces
-  (or N/A if history does not need to be tracked).
+2. Top-Level Section:  Summary section with document summary
+   followed by a History block with lines indented by 2 spaces
+   (or N/A if history does not need to be tracked).
 
-Document Sections:::  The rest of the document.
+3. Document Sections:  The rest of the document.
+
+4. KISS:  keep the document as simple as possible without a lot
+   of strange syntax, back slashes, quoting, etc.  Limit the
+   use of more-advanced AsciiDoc features.
 
 See link:template.txt[] for an text template and see
 link:template.html[] for the same converted to HTML.
@@ -89,12 +92,30 @@ link:template.html[] for the same converted to HTML.
 These documents are typically simple, short, and limited to
 a subset of the tools provided by AsciiDoc.  
 
+GitHub Limitations:
+-------------------
+
+Furter limitations are required of README.md documents for GitHub 
+as the parser does not support a lot of features.
+
+1.  Labeled lists (Item:: text) do not work.
+
+2.  Text like that at the end of this document must include blank lines.
+ 
+3.  The link: tag does not work and any URL is expanded.
+
+I am sure there are many other features.  When in doubt, follow KISS
+and then test the result.  This section is TBD....
+
 My Legacy Minidocs:
 -------------------
 
 Since the early 1990s, I have been creating "Minidocs" using a 
 format similar to AsciiDoc and even created a simple formatter 
-that converted from these into HTML (private project, not OSS).  
+that converted from these into HTML (private project, not OSS).
+Note, I also used this format for the Linux Kernel Document
+sound/oss/Introduction when I wrote it in 1998.  
+
 I wanted eliminate this custom format and stop supporting the
 legacy tool by using a similar, open source format plus tool suite.  
 AsciiDoc fit my needs and provides many additional features!  
@@ -115,11 +136,17 @@ Migration from the existing format to AsciiDoc is very simple:
 
 4.  Fix numbered and lettered lists to use N., not N) and to not
     mix top-level paragraphs in the middle of numbered lists.
+    This may require some minor changes to document structure.
 
 5.  Fix links to use the link: tag.  
 
 6.  Use [start=1] to restart a list in the same block, for
     example after a paragraph.
+
+7.  Fix any text that should be pre-formatted to be indented.
+
+8.  Add sub-sections, labeled lists, bold, and other features
+    as desired (but the goal is KISS).
 
 This would be a sample paragraph.  To restart the list use 
 the [start=1] tag.

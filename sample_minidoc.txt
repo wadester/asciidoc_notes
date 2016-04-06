@@ -1,34 +1,48 @@
 Sample Minidoc in AsciiDoc
 ==========================
 Wade Hampton <wadeh@localhost>
-0.2.2, 3/14/2016: more examples added
+0.2.3, 4/6/2016: more examples added
+
+Summary:
+--------
+
+The document starts with a Summary block describing the doc.
+The document should be short, simple, and use a clean subset
+of the AsciiDoc format.  If the document is a README.md for
+GitHub, it may require further simplification.
 
 This is a test document.  It is only a test.  Do not kick 
 your cat or otherwise panic.  It is only a test.  No nuclear
 radiation will impact your site.  This is {docname}.
 
-Be sure to create a header like above.  The full name with e-mail
-will allow a2x to create a clean document header.  Be sure 
+Be sure to create a header like the above.  The full name with 
+e-mail will allow a2x to create a clean document header.  Be sure 
 to add the comma after the version number.
 
 History:
 --------
 
-This is where history would go -- indent 2 spaces for preformat text.
+History is a short block with either N/A or a change log and it
+follows the Summary block.  It should be indented by 2 spaces.
+The lines should have version, date, optional initials, and changes.
 
-  0.1.0	02/25/2016    created
-  0.2.0 02/25/2016    Second version
-  0.2.1 03/11/2016    Minor updates, more text added
-  0.2.2 03/14/2016    more examples added
+  0.1.0	02/25/2016  created
+  0.2.0 02/25/2016  Second version
+  0.2.1 03/11/2016  Minor updates, more text added
+  0.2.2 03/14/2016  more examples added
+  0.2.3 04/06/2016  more examples added
 
 Notes:
 ------
 
+After History are document sections, for example this one is 
+called Notes....
+
 This is a sample minidoc.  It only includes 1 top-level section,
 the section with the line of ==== at the top.  Each subsequent
 section uses a line of dashes.  Bullets use * and numbered lists
-use 1) etc.  Bold is * + text + * like *this is bold*.  Note, 
-the old convertor may convert any * to bold....
+use 1. etc.  Bold is * + text + * like *this is bold*.  Note, 
+the old converter may convert any * to bold....
 
 If text is to be pre-formatted, preceed with a blank line
 then indent like:
@@ -41,6 +55,24 @@ then indent like:
 *  Add spaces after bullets, before pre-format text.
 *  Test with asciidoc inputdoc.txt, and test with a2x (see Makefile).
 *  Numbered lists should use a "n.", not "n)".  
+
+New Subsection:
+~~~~~~~~~~~~~~~
+
+A sub-section may be defined using "~~~~" under the title.  
+
+New Item:: This is a labeled item w/o the displayed colon.
+
+Labeled List::  A labeled list like this may be used with 
+  text followed by two colons (a third is optional and 
+  with some version is displayed).
+
+New Item:: This is a labeled item
+
+New Subsection:
+~~~~~~~~~~~~~~~
+
+Yet another sub-section!
 
 New Section:
 ------------
@@ -73,7 +105,7 @@ the [start=1] tag.
 
 This is a paragraph after a bullet list. To restart the list use 
 the [start=1] tag.  Below is a Roman number list (not supported
-with older AsciiDoc).
+with older versions of AsciiDoc).
 
 [start=1]
 i) Roman level 1
@@ -102,4 +134,6 @@ Conversion:
 
   a2x -d article -f pdf sample_minidoc.txt
   a2x -d article -f ps sample_minidoc.txt
+
+For more information, see the AsciiDoc home page.
 
