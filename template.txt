@@ -1,7 +1,7 @@
 Template Title
 ==============
 Wade Hampton <wadehamptoniv@gmail.com>
-0.1.3, 4/6/2016: added summary title line
+0.1.4, 12/21/2017: updated
 
 Summary:
 --------
@@ -13,13 +13,13 @@ History:
 --------
 
 Put your revision history here, indent by 2 spaces 
-(becomes preformat text).  Delete these lines.
-
+(becomes preformat text).  Delete the lines below.
 
   0.1.0	02/25/2016  created
   0.1.1 03/11/2016  notes added
   0.1.2 03/14/2016  cleanup, more examples added
   0.1.3 04/06/2016  added summary title line
+  0.1.4 12/21/2017  updated
 
 Notes:
 ------
@@ -38,7 +38,10 @@ b.  Second sub-item
 New Section:
 ------------
 
+This will be a new section. 
+
 * New section is here
+* More here....
  
 New Subsection:
 ~~~~~~~~~~~~~~~

@@ -1,7 +1,7 @@
 Notes and Examples on AsciiDoc
 ==============================
 Wade Hampton <wadehamptoniv@gmail.com>
-0.4.1, 4/6/2016: Update, cleanup
+0.4.2, 12/21/2017: Update
 
 Summary:
 --------
@@ -34,8 +34,8 @@ clean HTML, PDF, EPUB, and MANPAGE documents.
 
 My goals for a documentation solution:
 
-1. Simple, ASCII format that is human-readable, but also parsable.
-   Not a difficult, rigid format like XML or HTML.
+1. Simple, ASCII format that is human-readable, but also parsable and 
+   easy to grep.  It is not a difficult, rigid format like XML or HTML.
 
 2. Easy to learn, low barrier for creation of effective communications.
 
@@ -55,11 +55,27 @@ My goals for a documentation solution:
    README.md files for GIT repositories.  (This requires some
    testing and limits you to a subset of AsciiDoc.)
 
+AsciiFlow:
+----------
+
+AsciiFlow is a great, web-based tool for creating text diagrams that 
+can be pasted into a text document like AsciiDoc.  To preserve the
+original, I typically space the pasted drawing over by 2 spaces.
+For example:
+
+    +-------------+       +--------------------+
+    |  asciiflow  +------>+  AsciiDoc          |
+    +-------------+       +--------------------+
+
+See link:http://asciiflow.com/[]
+
+
 Links:
 ------
 
 * https://en.wikipedia.org/wiki/AsciiDoc (link:https://en.wikipedia.org/wiki/AsciiDoc[])
 * http://www.methods.co.nz/asciidoc/index.htm (link:http://www.methods.co.nz/asciidoc/index.html[])
+* http://asciiflow.com (link:http://asciiflow.com[])
 
 (Note that the AsciiDoc links are converted by GitHub to have 
 a [] at the end of them hence the inclusion of TWO copies
@@ -116,7 +132,7 @@ that converted from these into HTML (private project, not OSS).
 Note, I also used this format for the Linux Kernel Document
 sound/oss/Introduction when I wrote it in 1998.  
 
-I wanted eliminate this custom format and stop supporting the
+I wanted to eliminate this custom format and stop supporting the
 legacy tool by using a similar, open source format plus tool suite.  
 AsciiDoc fit my needs and provides many additional features!  
 
@@ -156,6 +172,28 @@ the [start=1] tag.
 1.  This is a new numbered list.
 2.  And more list.
 3.  Note, this will fail on GitHub....
+
+
+How I use AsciiDoc
+------------------
+
+1.  Each project typically has a source (or src) directory and a
+    doc directory, plus others as necessary (include, test, etc.).
+
+2.  At the very top of the project is a Makefile, a VERSION.txt with
+    the current software version, a README, and an INSTALL document.
+    The VERSION.txt is simply a number like 1.2.3.  The README
+    and INSTALL documents are AsciiDoc following this format.
+    The Makefile contains a doc stanza to convert README/INSTALL into
+    HTML format (and often also to make an index.html).
+
+3.  The *doc* directory contains a Makefile, README, INSTALL, and 
+    multiple *.txt* documents, all in this format.  These describe
+    code, file formats, setup, theory of operation, etc.  The
+    Makefile contains code to convert all the AsciiDoc documents into HTML.
+
+4.  Each other directory also contains a README and often INSTALL.
+
 
 Files:
 ------
